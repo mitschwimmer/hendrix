@@ -14,6 +14,8 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
+    optfix:
+      - enpass
     repos:
       files:
         - https://yum.enpass.io/enpass-yum.repo
