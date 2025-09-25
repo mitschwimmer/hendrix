@@ -2,9 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: hendrix
-description: My personal Blue-Build Recipe
+description: Blue-Build Recipe based on Bluefin
 
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
 image-version: 42 
 
 modules:
@@ -29,18 +29,5 @@ modules:
       packages:
         - distrobox
 
-  - type: default-flatpaks
-    configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: 
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
-
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-  - type: akmods
-    install:
-      - nvidia
-    nvidia-driver: nvidia-open
 
