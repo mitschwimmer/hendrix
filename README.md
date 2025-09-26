@@ -9,7 +9,11 @@ contrast to having Github Actions building an immutable image.
 ## Installation
 To rebase an existing atomic Fedora installation to the latest build:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- Remove all layered packages (you might add them again later)
+```bash
+  rpm-ostree reset
+```
+- Rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/mitschwimmer/hendrix:latest
   ```
