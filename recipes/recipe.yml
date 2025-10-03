@@ -28,6 +28,7 @@ modules:
         - enpass
         - ungoogled-chromium
         - openh264
+        - zsh
     remove:
       packages:
         - distrobox
