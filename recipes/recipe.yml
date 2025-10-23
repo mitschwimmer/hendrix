@@ -4,7 +4,7 @@
 name: hendrix
 description: Blue-Build Recipe based on Bluefin
 
-base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+base-image: ghcr.io/ublue-os/aurora-dx-nvidia-open
 image-version: 42 
 
 modules:
